@@ -24,15 +24,17 @@ function Add(){
   }
 
   return<div>
-    <Form classActivity="d-grid gap-2" style={{magrin:"15rem"}}>
+    <Form classActivity="d-grid gap-2" style={{magrin:"15rem", padding:'50px', width:'1000px', alignItems:'center' }}>
       <Form.Group classActivity="mb-3" controlId="formActivity">
         <Form.Control type="text" placeholder="Enter Activity" required onChange={(e) => setActivity(e.target.value)}>         
         </Form.Control>
       </Form.Group>
-      <Form.Group classActivity="mb-3" controlId="formDescription">
+      &nbsp;
+      <Form.Group classActivity="mb-3" controlId="formDescription" style={{marginBottom:'20px' }}>
         <Form.Control type="text" placeholder="Enter Description" required onChange={(e) => setDescription(e.target.value)}>         
         </Form.Control>
       </Form.Group>
+      
       <Button type="submit" onClick={(e) =>handleSubmit(e)}>Submit</Button>
     </Form>
   </div>
