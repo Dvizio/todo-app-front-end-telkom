@@ -27,19 +27,19 @@ function Home(){
   return(
     <Fragment>
       <div style={{margin:"10rem", backgroundColor:'#27374D', padding:'50px', borderRadius:'50px', color: 'white',  boxShadow: '5px 5px 7px black'}}>
-        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: 'auto'}}>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: 'auto', paddingBottom:"50px", fontFamily:'fantasy'}}>
         <h1>To Do List</h1>
         </div>
         <Table striped bordered hover size="lg" >
           <thead>
             <tr>
-              <th style={{color: 'white'}}>
-                Activity
+              <th style={{color: 'white', fontFamily:'revert'}}>
+                To do
               </th>
-              <th style={{color: 'white'}}>
+              <th style={{color: 'white', fontFamily:'revert'}}>
                 Description
               </th>
-              <th style={{color: 'white'}}>
+              <th style={{color: 'white', fontFamily:'revert'}}>
                 Actions
               </th>            
             </tr>
@@ -51,13 +51,13 @@ function Home(){
               Employees.map((item) =>{
                 return(
                   <tr>
-                    <td style={{color: 'white'}}>
+                    <td style={{color: 'white', fontFamily:'revert'}}>
                       {item.Activity}
                     </td>
-                    <td style={{color: 'white'}}>
+                    <td style={{color: 'white', fontFamily:'revert'}}>
                       {item.Description}
                     </td>
-                    <td style={{color: 'white'}}>
+                    <td style={{color: 'white', fontFamily:'revert'}}>
                       <Link to={'/edit'}>
                       <Button onClick={() => handleEdit(item.id, item.Activity, item.Description)}>Edit</Button>
                       </Link>
